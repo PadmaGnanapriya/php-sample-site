@@ -32,9 +32,10 @@
         $phrase1="student who are come late";
         $phrase2="in class, stand with Rock";
         $name="trevoir williams";
-        echo $phrase1. ", named Tiffany. ".$phrase2;
-        echo '<br/>';
+        echo $phrase1. ", named Tiffany. ".$phrase2.'<br/>';
+        echo 'The position of W letter : '.strpos($name,'w').'<br/>';
         echo '<hr/>';
+
         //String transformation
         echo 'Uppercase first letter: '.ucfirst($name).'<br/>';
         echo 'Uppercase first letter of each word: '.ucwords($name).'<br/>';
@@ -45,6 +46,7 @@
         echo '<hr/>';
         echo -10023/100;
         echo '<hr/>';
+
         $phrase="Padma Gnanapriya be or not to be";
         echo "<p> $phrase </p>";
         echo str_replace("napriya","paala",$phrase);
@@ -52,7 +54,20 @@
         echo "<p> $age </p>";
         $isMale=true;
         echo "<p> $isMale </p>";  // not print any thing
-        echo "<hr";      
+        echo "<hr>";    
+        
+        echo 'Without Trim : '."A"." B C D "."E".'<br/>';
+        echo 'Trim space with both sides : '."A".trim(" B C D ")."E".'<br/>';
+        echo 'Trim space to the left : '."A".ltrim(" B C D ")."E".'<br/>';
+        echo 'Trim space to the right : '."A".rtrim(" B C D ")."E".'<br/>';
+        echo '<hr>';
+
+        $date=getdate();
+        echo 'Today is '.$date['mday'].' th day of '.$date['mon'].' th month in '.$date['year'].'<br/>';
+        echo time().'<br>';
+        print date("m/d/y G.i:s<br>",time()).'<br/>';
+        print "Today is ";
+        print date("j of F Y, \a\\t g.i a",time());
     ?>
 
 </body>
